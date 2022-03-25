@@ -4,9 +4,11 @@
     "start": "imba -w server.imba",
     "build": "imba build -H --baseurl . server.imba",
     "predeploy": "npm run build && touch dist/public/.nojekyll",
-    "deploy": "gh-pages -d dist/public --dotfiles"
+    "deploy": "gh-pages -d dist/public --dotfiles",
+    "test": "cypress run"
   },
   "dependencies": {
+    "cypress": "^9.5.2",
     "express": "^4.17.1",
     "imba": "^2.0.0-alpha.199",
     "json-stringify-pretty-compact": "^3.0.0"
